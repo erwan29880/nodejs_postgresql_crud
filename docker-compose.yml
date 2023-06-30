@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  bddpsql:
+    container_name: "nodpsqlCrud"
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5433:5432'
+    volumes: 
+      - ./postgreb:/var/lib/postgresql/data
